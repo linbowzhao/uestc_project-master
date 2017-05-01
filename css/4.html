@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>website</title>
+    <link href="new.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2fbbca;">
+    <div id="firstContainer" class="container">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <a href="#" id="a1" style="font-size:40px;color:whitesmoke;font-weight:100;">菁华成长</a>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" href="#webpage">
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="webpage">
+            <ul id="ul1" class=" nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">公司首页<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">业绩展示</a>
+                        </li>
+                        <li>
+                            <a href="#">公司情况</a>
+                        </li>
+                        <li>
+                            <a href="#">服务情况</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">原创干货</a></li>
+                <li><a href="#">官方论坛</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+
+            <form action="#.php" class="navbar-form navbar-right">
+                <div class="input-group">
+                    <input class="form-control" placeholder="输入关键字查找内容">
+                </div>
+                <button class="btn btn-default">查找</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container" id="fourthContainer">
+    <div class="row">
+        <div class="col-md-7">
+            <form action=".php" method="post" style="margin:5%;">
+                <input type="text" class="form-control"  style="margin:5%;" placeholder="输入标题">
+                <hr>
+                <div class="input-group" style="margin:5%;">
+                    <img src="./photo/9" alt="图标" style="float:left;">
+                    <input type="file"  style="float:left;">
+                </div>
+                <hr>
+                <div style="display:flex;justify-content: center">
+                <textarea name="enter" id="" cols="45" rows="10"></textarea>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-success" style="float:right">提交</button>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div id="container1">
+                <h3>热门推荐</h3>
+                <p><a href="#">这是标题</a></p>
+                <p>{{date}}</p>
+                <hr>
+                <p><a href="#">这是标题二</a></p>
+                <p>{{date}}</p>
+                <hr>
+                <p><a href="#">这是标题三</a></p>
+                <p>{{date}}</p>
+                <hr>
+            </div>
+            <div id="container2">
+                <h3>精选内容</h3>
+                <p><a href="#">这是标题</a></p>
+                <p>{{date}}</p>
+                <hr>
+                <p><a href="#">这是标题二</a></p>
+                <p>{{date}}</p>
+                <hr>
+                <p><a href="#">这是标题三</a></p>
+                <p>{{date}}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="font-weight:100;margin-top:10%;position:fixed;bottom:0;left:10%;">&copy;张赵同盟有限集团</footer>
+</body>
+</html>

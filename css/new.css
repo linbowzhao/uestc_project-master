@@ -1,0 +1,247 @@
+body {
+    margin-top: 50px;
+}
+#introduce{
+    width: 60%;
+    margin: auto;
+}
+#footer{
+    background-color:#393d49;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+#blank{
+    height: 200px;
+}
+#footer span{
+    line-height: 60px;
+    color: white;
+    font-size: 20px;
+}
+#comment{
+    margin-top: 30px;
+}
+.btn-success{
+    float: right;
+    margin-right: 11px;
+    margin-top: 5px;
+}
+hr {
+    height: 1px;
+    background-color: #cccccc;
+}
+#editTitle{
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+#editContents{
+    margin: auto;
+    margin-top: 20px;
+}
+.title h4{
+    margin-bottom:1px;
+    margin-left:50px;
+}
+#container1 h3,#container2 h3{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#a1:hover, a:focus {
+    text-decoration: none;
+    outline: none; /*delete the type of a Tag*/
+    font-size: 26px; /*make font-size 26px when it get focus*/
+}
+
+#firstContainer {
+    width: 75%; /*make navbar tight*/
+
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #29b1bf; /*change its background-color when it get focus*/
+    color: white; /* font color white*/
+}
+
+.dropdown-menu > li > a {
+    color: white; /*font color white when everything is static*/
+}
+
+.dropdown-menu {
+    background-color: #2fbbca; /* background-color*/
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #29b1bf;
+    color: white;
+}
+
+#ul1 > li {
+    margin: 0 10px; /*space between list*/
+}
+
+nav li a {
+    font-weight: 500;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a {
+    color: white; /*color white*/
+}
+
+.header {
+    margin: 15px auto;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+}
+
+.header a {
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin: 20px;
+}
+#editA{
+    display: block;
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+.title ul > li {
+    float: left;
+    margin: 5px 20px;
+    font-weight: 400;
+    list-style: none;
+    color:darkgrey;
+    font-size:smaller;
+}
+
+.title ul > li > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity:0.5;
+}
+
+.clear {
+    clear: both;
+}
+
+section p {
+    text-indent: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    white-space: pre-wrap;
+}
+pre{
+    text-indent: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#firstPage{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-md-7 a {
+    text-decoration: none;
+    outline: none;
+}
+#container1 {
+    background-color: #f5f5f5;
+    margin-top: 5%;
+    padding: 10px 10px 20px 10px;
+    border-radius: 20px;
+}
+
+#container1 p, #container2 p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0;
+    color: darkgrey;
+}
+#container1 a, #container2 a {
+    text-decoration: none;
+    outline: none;
+}
+
+#container2 {
+    padding: 10px 10px 20px 10px;
+    margin-top: 5%;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+}
+
+#container2 hr {
+    height: 1px;
+    background-color: #ccc;
+}
+
+#secondPage ul {
+    margin:0;
+}
+
+#secondPage ul > li {
+    list-style: none;
+    float: left;
+    margin-bottom: 0;
+}
+#secondPage ul > li p{
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: darkgray;
+    font-size: smaller;
+}
+#secondPage hr{
+    margin-top: 0;
+    height: 1px;
+    color: #f5f5f5;
+}
+
+#secondPage textarea {
+    display: block;
+    margin: 10% auto;
+}
+
+#secondPage button {
+    float: right;
+}
+
+#thirdContainer{
+    width:80%;
+}
+#thirdPage ul {
+    margin-top: 10%;
+}
+#thirdPage ul li a{
+    text-decoration:none;
+}
+#thirdPage ul > li:nth-child(1),#thirdPage ul > li:nth-child(2),#thirdPage ul > li:nth-child(3) {
+    font-weight: 500;
+    list-style: none;
+    background-color: #2fbbca;
+    margin: 10px auto;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+#thirdPage ul li:nth-child(4) {
+    list-style:none;
+    display:flex;
+}
+#thirdPage ul li img{
+    margin:0 auto;
+    width:89%;
+    height:200px;
+
+}
+#thirdparagraph p{
+    margin-top:40px;
+    padding:20px;
+    background-color:#f5f5f5;
+    border-radius:20px;
+}
