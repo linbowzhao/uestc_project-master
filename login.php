@@ -16,7 +16,7 @@
 
     <?php
     if(isset($_COOKIE['jinghua'])&&$_COOKIE['jinghua']=='jinghua666666'){
-        include "edit.php";
+        include "passageEdit.php";
     }else{echo '    <div  id="login">
         <form>
             <input type="text" id="admin" placeholder="管理员账号" required>
