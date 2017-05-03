@@ -48,7 +48,7 @@
                 <p><?php echo $passage;?></p><!--这是文章-->
             </section>
             <form action="passage.php?pid=<?php echo $pid;?>" method="post">
-                <textarea wrap="hard" cols="85" rows="7" name="comment" required></textarea>
+                <textarea wrap="hard" cols="85" rows="7" name="comment" placeholder="请输入评论" required></textarea>
                 <button type="submit" class="btn btn-success">发布评论</button>
             </form>
             <?php
