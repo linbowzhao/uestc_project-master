@@ -1,17 +1,3 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <title>website</title>
-    <link href="css/new.css" type="text/css" rel="stylesheet">
-</head>
-<body>
 <?php include "includes/nav.html";
 include "includes/cnn.php";
 ?>
@@ -48,6 +34,4 @@ include "includes/cnn.php";
         <?php include"includes/right.php"?>
     </div>
 </div>
-</body>
 <?php include "includes/footer.html"; ?>
-</html>
