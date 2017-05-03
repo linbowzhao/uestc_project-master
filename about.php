@@ -1,71 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<title>关于我们</title>
-	<style>
-		*{  
-			margin:0;
-			padding:0;
-			box-sizing: border-box;
-		}
-		body{
-			overflow: hidden;
-		}
-		.info{
-			position: absolute;
-			top: 10%;
-			left: 45%;
-			color: #777;
-
-		}
-		.info h1{
-			margin-left: -40px;
-			margin-bottom: 10px;
-			letter-spacing: 10px;
-			font-weight: lighter;
-			font-size: 35px;
-			font-family: "Microsoft Yahei";
-			-webkit-user-select:none;
-		}
-		span{
-	 		height:10px;
-   			width:25px;
-	 		display:inline-block;
-	 		cursor:pointer;  
-	        transition: height 0.2s;
-	     	-o-transition: height 0.2s;	
-	    	-moz-transition: height 0.2s;	
-	 		-webkit-transition: height 0.2s;	
-
-		}
-		span:hover{
-			 height:15px;
-		}
-		#blue{
-  			background-color:#367aec;
-  			left:30px;
-		}
-		#purple{
-  			background-color:#E84A5F;
-  			left:50px;
-		}
-		#black{
-  			background-color:#52D681;
-  			left:70px;
-		}
-		
-	</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>关于我们</title>
+    <link href="css/new.css" type="text/css" rel="stylesheet">
+    <style>
+        body{
+            overflow: hidden;
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
+<?php include "includes/nav.html"?>
 	<canvas id="canvas" style="background:#fff;">
 		<p>你的浏览器不支持canvas</p>
 	</canvas>
 	<div class="info">
-	<h1>联系我们</h1>
+        <h1>联系我们</h1>
+        <p>公众号：jinghuacehgnzhang</p>
+        <p>QQ:6666666666</p>
 	</div>
-
+<div class="info1">
+    <p>愿菁华伴随着你的每一步成长</p>
+</div>
 <script src="js/vertex.js"></script>
 <script src="js/index.js"></script>	
 </body>

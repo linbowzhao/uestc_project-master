@@ -4,6 +4,64 @@ body {
 #introduce{
     width: 60%;
     margin: auto;
+    padding-top: 50px;
+}
+#picture{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#picture ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#picture ul li{
+    display: none;
+}
+#picture input{
+    margin: 10px;
+}
+#sub1{
+    width: 50px;
+    height: 50px;
+}
+#sub2{
+    width: 50px;
+    height: 50px;
+}
+.info{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    color: #777;
+    text-align: center;
+}
+.info h1{
+    letter-spacing: 10px;
+    font-weight: lighter;
+    font-size: 35px;
+    -webkit-user-select:none;
+}
+.info1{
+    position: absolute;
+    top: 70%;
+    left: 37%;
+    color: #777;
+}
+.info1 p{
+    color: white;
+    letter-spacing: 10px;
+    font-weight: lighter;
+    font-size: 25px;
+    -webkit-user-select:none;
+}
+#banner{
+    width: 100%;
+    height: auto;
 }
 #footer{
     background-color:#393d49;
@@ -59,7 +117,6 @@ hr {
     width: 75%; /*make navbar tight*/
 
 }
-
 .dropdown-menu > li > a:hover {
     background-color: #29b1bf; /*change its background-color when it get focus*/
     color: white; /* font color white*/
