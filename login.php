@@ -23,7 +23,7 @@
             <input type="password" id="adminPassword" placeholder="密码" required>
             <input type="button" id="button" class="btn btn-success" value="登陆">
         </form>
-    </div>';}
+    </div>';}//密码和账号对就进入更改页面，失败就留在登陆页面
     ?>
 </body>
 <script>
