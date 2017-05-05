@@ -24,8 +24,8 @@
 				    $pid=$_GET['pid'];  
 					}    
 			$sql = 'select * from bbspage WHERE bid='.$pid;//查到对应文章
-			$rs = mysqli_query($sql);
-			$contents = mysqli_fetch_array($rs);
+			$rs = mysql_query($sql);
+			$contents = mysql_fetch_array($rs);
 			$title = $contents['title'];    
 			$passage = $contents['bbspassage'];
 	        $author = $contents['author'] ;
@@ -54,7 +54,7 @@
             if(isset($_POST["comment"])) {
                 $comment = $_POST["comment"];//评论内容的获取
                 $sql = "INSERT INTO bbscomment (comment,bbsid) VALUES ('".$comment."','".$pid."');";
-                $rs = mysqli_query($sql);
+                $rs = mysql_query($sql);
                 if ($rs) {
                     echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
                 } else {
@@ -67,8 +67,8 @@
                 <hr/>
                 <?php
                 $sql="SELECT * FROM bbscomment WHERE bbsid=$pid ORDER BY ctime DESC LIMIT 4";//修改这里的数据就可以改输出评论条数
-                $rs=mysqli_query($sql);
-                $contents=mysqli_fetch_array($rs);
+                $rs=mysql_query($sql);
+                $contents=mysql_fetch_array($rs);
                 do{
                     $c=$contents['comment'];
                     $t=$contents['ctime'];
@@ -78,7 +78,7 @@
                     <small><?php echo $t;?></small>
                     <hr/>
                     <?php
-                }while($contents = mysqli_fetch_array($rs))
+                }while($contents = mysql_fetch_array($rs))
                 ?>
             </section>
         </div>
