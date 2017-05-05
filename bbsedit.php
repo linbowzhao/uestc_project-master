@@ -31,9 +31,9 @@ include "includes/cnn.php";
                 $contents = $_POST["editContents"];
                 $title=$_POST["editTitle"];
                 $sql = "INSERT INTO bbspage (title,bbspassage) VALUES ('".$title."','".$contents."');";
-                $rs = mysql_query($sql);
+                $rs = mysqli_query($sql);
                 $sql2="SELECT * FROM bbspage WHERE title=$title ORDER BY time DESC LIMIT 1";
-                $con=mysql_fetch_array(mysql_query($sql2));
+                $con=mysqli_fetch_array(mysqli_query($sql2));
                 $pid=$con['bid'];
                 echo $pid;
                 if ($rs) {

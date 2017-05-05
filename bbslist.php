@@ -23,9 +23,9 @@
 			include('includes/cnn.php');
 			$perpagenum = 5;//定义每页显示几条
             if(isset($_GET['i'])&& $_GET['i']==1){
-                $total = mysql_fetch_array(mysql_query("select count(*) from bbspage where importance=1"));//查询数据库中精选一共有多少条数据
+                $total = mysqli_fetch_array(mysqli_query("select count(*) from bbspage where importance=1"));//查询数据库中精选一共有多少条数据
             }else{
-                $total = mysql_fetch_array(mysql_query("select count(*) from bbspage"));//查询数据库中一共有多少条数据
+                $total = mysqli_fetch_array(mysqli_query("select count(*) from bbspage"));//查询数据库中一共有多少条数据
             }
 			$Total = $total[0];//
 			$Totalpage = ceil($Total/$perpagenum);//上舍，取整
@@ -47,8 +47,8 @@
                         $i=0;
                     }
 
-					$rs = mysql_query($sql);
-					$contents = mysql_fetch_array($rs);
+					$rs = mysqli_query($sql);
+					$contents = mysqli_fetch_array($rs);
 					if($total)//如果$total不为空则执行以下语句
 					{
 					    do
@@ -76,7 +76,7 @@
                 <hr/>  <!--this is a line-->
                 <?php
                 }    
-					while($contents = mysql_fetch_array($rs));//do....while
+					while($contents = mysqli_fetch_array($rs));//do....while
                             $per = $page - 1;//上一页
                             $next = $page + 1;//下一页
                             echo "<p style='text-align: center'>共有".$Total."篇帖子";

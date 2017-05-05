@@ -24,8 +24,8 @@
 				    $pid=$_GET['pid'];  
 					}    
 			$sql = 'select * from passage WHERE pid='.$pid;//查到对应文章
-			$rs = mysql_query($sql);
-			$contents = mysql_fetch_array($rs);
+			$rs = mysqli_query($sql);
+			$contents = mysqli_fetch_array($rs);
 			$title = $contents['title'];    
 			$passage = $contents['passage'];
 	        $author = $contents['author'] ;
@@ -56,7 +56,7 @@
                 $comment = $_POST["comment"];//评论内容的获取
 
                 $sql = "INSERT INTO comment (comment,passageid) VALUES ('".$comment."','".$pid."');";
-                $rs = mysql_query($sql);
+                $rs = mysqli_query($sql);
                 if ($rs) {
                     echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
                 } else {
@@ -69,14 +69,14 @@
                 <hr/>
                 <?php
                     $sql="SELECT * FROM comment WHERE passageid=$pid ORDER BY ctime DESC LIMIT 4";//修改这里的数据就可以改输出评论条数
-                    $rs=mysql_query($sql);
-                    $contents=mysql_fetch_array($rs);
+                    $rs=mysqli_query($sql);
+                    $contents=mysqli_fetch_array($rs);
                     do{?>
                         <p>游客:<?php echo $contents['comment'];?></p>
                         <small><?php echo $contents['ctime'];?></small>
                         <hr/>
                         <?php
-                    }while($contents = mysql_fetch_array($rs))
+                    }while($contents = mysqli_fetch_array($rs))
                 ?>
             </section>
         </div>
