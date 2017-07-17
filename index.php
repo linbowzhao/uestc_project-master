@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <title>website</title>
+    <title>公司首页</title>
     <link href="css/new.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <?php include "includes/nav.html"?>
 <img src="image/banner.gif" alt="banner" id="banner">
-<div id="introduce">
+<div class="container include">
     <p><h3>团队历史</h3><br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;菁华自招团队成立于2015年，后更名为菁华成长，由电子科大2014级，2015级和2016 级各大院学生组成。
         由于家长和同学们的反响很好，且得到了在校老师的认同和支持， 决定于2016年转为创业团队。2015年末，
@@ -41,48 +41,49 @@
         我们都是满满的好评。
     </p>
 </div>
-<div id="picture">
-    <input id="sub1" type="image" src="image/before.png">
-    <ul>
-        <li style="display:block"><img src="image/picture1.png" alt="我们的图片"></li>
-        <li><img src="image/picture2.png" alt="我们的图片"></li>
-        <li><img src="image/picture3.png" alt="我们的图片"></li>
-        <li><img src="image/picture4.png" alt="我们的图片"></li>
-        <li><img src="image/picture5.png" alt="我们的图片"></li>
-    </ul>
-    <input id="sub2" type="image" src="image/next.png">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="image/picture1.png" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="image/picture2.png" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="image/picture3.png" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <img src="image/picture4.png" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <img src="image/picture5.png" alt="Third slide">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev">&lsaquo;
+                </a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next">&rsaquo;
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<script>
-    /*轮播*/
-    $(function(){
-        var i=0;
-        var len=$("#picture ul li").length-1;
-        $("#sub1").click(function(){
-            if(i==len){
-                i=-1;
-            }
-            i++;
-            $("#picture ul li").eq(i).fadeIn().siblings().hide();//除了选中元素的元素，其它兄弟元素都hide()；
-        });
-//到这里分开！上面的是上一张点击的效果代码，下面的是下一张点击的效果代码．
-        $("#sub2").click(function(){//获取类名的点击事件．
-            if(i==0){
-                i=len+1;
-            }
-            i--;
-            $("#picture ul li").eq(i).fadeIn().siblings().hide();
-        });
-    });
-    function click(){
-        setTimeout(function () {
-            $('#sub2').click();
-            console.log('1');
-            click();
-        },3000);
-    }//自动轮播
-    click();
-    /*轮播*/
-</script>
+
 </body>
 <?php include "includes/footer.html"; ?>
 </html>

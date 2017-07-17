@@ -1,7 +1,7 @@
 var canvas = document.getElementById('canvas'),
-	ctx = canvas.getContext('2d'),
-	W = window.innerWidth;//画布宽度
-	H = window.innerHeight;//画布高度
+ctx = canvas.getContext('2d'),
+    W = window.innerWidth;//画布宽度
+H = window.innerHeight;//画布高度
 
 var color1 = "#2fbbca",
 	color2 = "#29b1bf";
@@ -16,7 +16,6 @@ var vertexes = [],    //顶点坐标
 
 	var vPos = 125;  //震荡点
 	var dd = 15;     //缓冲
-
 	//生成顶点，初始差分值
 	for(var i=0; i<verNum; i++){
 		vertexes[i] = new Vertex(W/(verNum-1)*i, H/2, H/2);//波动点的坐标
@@ -94,7 +93,7 @@ var vertexes = [],    //顶点坐标
 		ctx.restore();
 	}
 
-	
+
 	//顶点更新
 	function update(){
 		autoDiff -= autoDiff*0.9;

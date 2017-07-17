@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <title>关于我们</title>
+    <title>联系我们</title>
     <link href="css/new.css" type="text/css" rel="stylesheet">
     <style>
         body{

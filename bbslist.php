@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <title>list</title>
+    <title>官方论坛</title>
     <link href="css/new.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -59,14 +59,15 @@
 	                            $time=$contents['time'];
 	                            $look=$contents['look'];
 								$pid=$contents['bid'];
+								$comCount=$contents['comCount'];
             ?>
                 <div class="title">
                     <h4><a  href="bbspage.php?pid=<?php echo $pid;?>"><?php echo $title;?></a></h4><!--这是标题-->
                     <ul>
                         <li><img src="image/1.png"><?php echo $look;?></li><!--这是点击率-->
-                        <li><img src="image/2.png"><?php echo $author;?></li><!--这是发布者-->
+                        <li><img src="image/2.png">游客</li><!--这是发布者-->
                         <li><img src="image/3.png"><?php echo $time;?></li><!--这是发布时间-->
-                        <li>评论</li><!--这是评论数-->
+                        <li>评论:<?php echo $comCount ?></li><!--这是评论数-->
                         <div class="clear"></div>
                     </ul>
                 </div>

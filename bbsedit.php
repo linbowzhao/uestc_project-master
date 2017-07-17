@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <title>website</title>
+    <title>评论编辑</title>
     <link href="css/new.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -22,7 +22,7 @@ include "includes/cnn.php";
             <form action="bbsedit.php" method="post">
                 <input type="text" class="form-control" id="editTitle" name="editTitle" placeholder="输入标题" required>
                 <div style="display:flex;justify-content: center">
-                <textarea wrap="hard" id="editContents" name="editContents"cols="85" rows="20" placeholder="请输入内容" required></textarea>
+                <textarea wrap="soft" id="editContents" name="editContents"cols="85" rows="20" placeholder="请输入内容" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-success">提交</button>
             </form>

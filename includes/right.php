@@ -12,7 +12,7 @@
             ?>
             <p><a href="passage.php?pid=<?php echo $pid;?>"><?php echo $title;?></a></p><!--这是标题-->
             <p><?php echo $time;?></p><!--这是日期-->
-            <hr>
+            <hr/>
             <?php
         }while($contents = mysql_fetch_array($rs))
         ?>
