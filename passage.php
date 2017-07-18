@@ -21,7 +21,7 @@ if (!isset($_GET['pid']) || !intval($_GET['pid']))//判断是否有pid从上一�
 } else {
     $pid = $_GET['pid'];
 }
-$sql = 'select * from passage WHERE pid=' . $pid;//查到对应文章
+$sql = "select * from passage WHERE pid='" .$pid."'";//查到对应文章
 $rs = mysql_query($sql);
 $contents = mysql_fetch_array($rs);
 $title = $contents['title'];
@@ -47,23 +47,29 @@ $look += 1;
                 <p><?php echo $passage; ?></p><!--这是文章-->
             </section>
             <form action="passage.php?pid=<?php echo $pid; ?>" method="post">
-                <textarea name="comment" placeholder="请输入评论" wrap="soft" required></textarea>
+                <textarea name="comment" placeholder="请输入评论" wrap="soft" maxlength="200" required></textarea>
                 <button type="submit" class="btn btn-success">发布评论</button>
             </form>
             <?php
             if (isset($_POST["comment"])) {
                 $comment = $_POST["comment"];//评论内容的获取
-                $sql = "INSERT INTO comment (comment,passageid) VALUES ('" . $comment . "','" . $pid . "');";
-                $rs = mysql_query($sql);
-                $sql = "SELECT COUNT(*) FROM comment WHERE passageid=$pid";
-                $rs = mysql_query($sql);
-                $comCount = mysql_fetch_array($rs)[0];
-                $sql = "UPDATE passage SET comcount=$comCount where pid=$pid";
-                $rs2 = mysql_query($sql);
-                if ($rs && $rs2) {
-                    echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
-                } else {
-                    echo "<script language=\"JavaScript\">alert(\"发布失败\");</script>";
+                $rule='/(\')+(.)*(\-\-)+/ix';
+                $checkComment=preg_match($rule,$comment);
+                if($checkComment){
+                    echo "<script language=\"JavaScript\">alert(\"含有非法字符\");</script>";
+                }else{
+                    $sql = "INSERT INTO comment (comment,passageid) VALUES ('" . $comment . "','" . $pid . "');";
+                    $rs = mysql_query($sql);
+                    $sql = "SELECT COUNT(*) FROM comment WHERE passageid='".$pid."'";
+                    $rs = mysql_query($sql);
+                    $comCount = mysql_fetch_array($rs)[0];
+                    $sql = "UPDATE passage SET comcount='".$comCount. "'where pid='".$pid."'";
+                    $rs2 = mysql_query($sql);
+                    if ($rs && $rs2) {
+                        echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
+                    } else {
+                        echo "<script language=\"JavaScript\">alert(\"发布失败\");</script>";
+                    }
                 }
             }//把评论输入到数据库
             ?>
@@ -71,9 +77,9 @@ $look += 1;
             <section id="comment">
                 <hr/>
                 <?php
-                $sql = "UPDATE passage SET look=$look where pid=$pid";
+                $sql = "UPDATE passage SET look='".$look."' where pid='".$pid."'";
                 $rs = mysql_query($sql);
-                $sql = "SELECT * FROM comment WHERE passageid=$pid ORDER BY ctime DESC LIMIT 4";//修改这里的数据就可以改输出评论条数
+                $sql = "SELECT * FROM comment WHERE passageid='".$pid."' ORDER BY ctime DESC LIMIT 4";//修改这里的数据就可以改输出评论条数
                 $rs = mysql_query($sql);
                 $contents = mysql_fetch_array($rs);
                 do {
