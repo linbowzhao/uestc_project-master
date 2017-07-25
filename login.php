@@ -14,23 +14,25 @@
 </head>
 <body>
 
-    <?php
-    if(isset($_COOKIE['jinghua'])&&$_COOKIE['jinghua']=='jinghua666666'){
-        include "passageEdit.php";
-    }else{echo '    <div  id="login">
+<?php
+if (isset($_COOKIE['jinghua']) && $_COOKIE['jinghua'] == 'jinghua666666') {
+    include "passageEdit.php";
+} else {
+    echo '    <div  id="login">
         <form>
             <input type="text" id="admin" placeholder="管理员账号" required>
             <input type="password" id="adminPassword" placeholder="密码" required>
             <input type="button" id="button" class="btn btn-success" value="登陆">
         </form>
-    </div>';}//密码和账号对就进入更改页面，失败就留在登陆页面
-    ?>
+    </div>';
+}//密码和账号对就进入更改页面，失败就留在登陆页面
+?>
 </body>
 <script>
-    document.getElementById('button').addEventListener('click',function () {
-        var admin=document.getElementById('admin').value;
-        var password =document.getElementById('adminPassword').value;
-        document.cookie=admin+'='+password+';';
+    document.getElementById('button').addEventListener('click', function () {
+        var admin = document.getElementById('admin').value;
+        var password = document.getElementById('adminPassword').value;
+        document.cookie = admin + '=' + password + ';';
         window.location.reload();//重新加载此页面
     });//监听按钮事件把cookie插入
 </script>
