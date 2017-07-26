@@ -49,7 +49,7 @@
 
 					$rs = mysql_query($sql);
 					$contents = mysql_fetch_array($rs);
-					if($total)//如果$total不为空则执行以下语句
+					if($total["count(*)"]!=0)//如果$total不为空则执行以下语句
 					{
 					    do
 						    {
@@ -101,12 +101,8 @@
 <?php include "includes/right.php"?>
     </div>
 </div>
-
+<?php include "includes/footer.html"; ?>
 <script>
-    $(document).ready(function () {
-
-    })
 </script>
 </body>
-<?php include "includes/footer.html"; ?>
 </html>

@@ -55,6 +55,6 @@ include "includes/cnn.php";
         <?php include"includes/right.php"?>
     </div>
 </div>
-</body>
 <?php include "includes/footer.html"; ?>
+</body>
 </html>

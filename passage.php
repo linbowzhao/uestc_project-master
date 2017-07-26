@@ -96,6 +96,6 @@ $look += 1;
     </div>
 
 </div>
-</body>
 <?php include "includes/footer.html"; ?>
+</body>
 </html>

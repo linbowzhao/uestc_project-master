@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-7">
             <div class="header">
-                <a><?php echo $_GET['search']?>的搜索结果</a>
+                <a>"<?php echo $_GET['search']?>"的搜索结果</a>
             </div>
             <?php
             include('includes/cnn.php');
@@ -95,12 +95,6 @@
         <?php include "includes/right.php"?>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-
-    })
-</script>
-</body>
 <?php include "includes/footer.html"; ?>
+</body>
 </html>

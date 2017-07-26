@@ -97,6 +97,6 @@ $comCount = $contents['comCount'];
         <?php include "includes/right.php" ?>
     </div>
 </div>
-</body>
 <?php include "includes/footer.html"; ?>
+</body>
 </html>

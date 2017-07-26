@@ -29,8 +29,8 @@ include "includes/cnn.php";
                     $pid=$con['pid'];
                     echo $pid;
                     if ($rs) {
-                        echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
                         echo "<script>window.location =\"passage.php?pid=$pid\"</script>";
+                        echo "<script language=\"JavaScript\">alert(\"发布成功\");</script>";
                     } else {
                         echo "<script language=\"JavaScript\">alert(\"发布失败\");</script>";
                     }
